@@ -6,11 +6,11 @@
   font-family: font2;
   src: url(./assets/Exo-Medium.ttf);
 }
-$color1: #ffcdb2;
-$color2: #ffb4a2;
-$color3: #e5989b;
-$color4: #b5898d;
-$color5: #6d6875;
+$color1: #6f1d1b;
+$color2: #141204;
+$color3: #432818;
+$color4: #99582a;
+$color5: #262a10;
 
 * {
   padding: 0;
@@ -20,10 +20,55 @@ $color5: #6d6875;
 }
 body {
   font-family: font2, serif;
-  font-size: 1rem;
-  color: $color4;
-  height: 100vh;
-  overflow: hidden;
+  font-size: 1.5rem;
+  color: $color2;
+  background: url(./img/bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+.bg-opacity {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 55px;
+  z-index: 10;
+}
+h2 {
+  font-family: font1, serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: $color1;
+  text-align: center;
+  z-index: 2;
+}
+p {
+  text-align: left;
+  line-height: 36px;
+  margin: 25px 0;
+}
+.button {
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 50px;
+  padding: 13px 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-family: font2, sans-serif;
+  transition: 0.3s;
+  &:hover {
+    border: 1px solid $color2;
+    color: $color2;
+  }
 }
 a {
   text-decoration: none;
@@ -32,21 +77,24 @@ a {
     color: $color5;
   }
 }
-// *************HEADER***************
+
+// *************************************HEADER*******************************************
 
 h1 {
+  text-align: center;
   font-family: font1, serif;
   font-size: 3rem;
   font-weight: 400;
   color: $color3;
-  text-align: center;
+  margin: 150px;
 }
 // *************************************NAVBAR*******************************************
 .nav {
   position: absolute;
-  top: 10px;
-  right: 30px;
+  top: 30px;
+  right: 50px;
   z-index: 100;
+  font-size: 1.5rem;
 
   li {
     display: inline;
@@ -55,6 +103,7 @@ h1 {
 
     &:hover {
       border: 5px solid $color5;
+      border-radius: 50px;
       transition: 0.5s ease-in-out;
     }
     &:active {
@@ -66,11 +115,26 @@ h1 {
   }
 }
 // *************************************MAIN*******************************************
-h2 {
-  font-family: font1, serif;
-  font-size: 2rem;
-  font-weight: 200;
-  color: $color2;
+
+// *********************SECTION 1****************
+.section-1 {
+  display: grid;
+  grid-template-columns: 37% 63%;
+  min-height: 400px;
+  padding: 50px;
+}
+.section-1 .img {
+  background: url(./img/target.jpg) center/cover;
+}
+// *********************SECTION 2****************
+.section-2 {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  min-height: 400px;
+  padding: 50px;
+}
+.section-2 .img {
+  background: url(./img/bow-on-wall.jpg) center/cover;
 }
 // *************************************CONTACT*******************************************
 .contact {
@@ -82,11 +146,19 @@ h2 {
   grid-template-columns: 50% 50%;
   grid-template-rows: 100px 224px;
   grid-template-areas:
-    "input11 input2"
+    "input1 input2"
     "textarea textarea";
   width: 85%;
   margin: 30px auto;
   max-width: 600px;
+  @media screen and (max-width: 840px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 100px 200px;
+    grid-template-areas:
+      "input1"
+      "input2"
+      "textarea";
+  }
 }
 .text-area {
   grid-area: textarea;
@@ -107,7 +179,7 @@ textarea {
 }
 input[type="text"]:focus,
 textarea:focus {
-  border: 2px solid skyblue;
+  border: 2px solid $color2;
 }
 textarea {
   resize: none;
@@ -119,6 +191,7 @@ textarea {
   justify-content: space-evenly;
   font-size: 1.3em;
   font-family: font1, crusive;
+  padding: 50px;
 
   a {
     padding: 0px 25px;
@@ -128,14 +201,11 @@ textarea {
     }
   }
   & a:hover {
-    transform: scale(2.5);
+    transform: scale(1.5);
     transition: 0.4s ease-out;
-    text-shadow: 0 0 5px $color1, 0 0 10px $color1, 0 0 15px $color1,
-      0 0 20px $color2, 0 0 30px $color2, 0 0 40px $color2, 0 0 55px $color2,
-      0 0 75px $color2;
-
+    color: $color2;
     &:nth-child(5) {
-      transform: scale(1.1);
+      transform: scale(1);
       font-weight: bolder;
     }
   }

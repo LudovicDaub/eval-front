@@ -15,45 +15,98 @@
 
 body {
   font-family: font2, serif;
-  font-size: 1rem;
-  color: #b5898d;
-  height: 100vh;
-  overflow: hidden;
+  font-size: 1.5rem;
+  color: #141204;
+  background: url(./img/bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.bg-opacity {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 55px;
+  z-index: 10;
+}
+
+h2 {
+  font-family: font1, serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #6f1d1b;
+  text-align: center;
+  z-index: 2;
+}
+
+p {
+  text-align: left;
+  line-height: 36px;
+  margin: 25px 0;
+}
+
+.button {
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 50px;
+  padding: 13px 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-family: font2, sans-serif;
+  transition: 0.3s;
+}
+.button:hover {
+  border: 1px solid #141204;
+  color: #141204;
 }
 
 a {
   text-decoration: none;
-  color: #6d6875;
+  color: #262a10;
 }
 a:visited {
-  color: #6d6875;
+  color: #262a10;
 }
 
 h1 {
+  text-align: center;
   font-family: font1, serif;
   font-size: 3rem;
   font-weight: 400;
-  color: #e5989b;
-  text-align: center;
+  color: #432818;
+  margin: 150px;
 }
 
 .nav {
   position: absolute;
-  top: 10px;
-  right: 30px;
+  top: 30px;
+  right: 50px;
   z-index: 100;
+  font-size: 1.5rem;
 }
 .nav li {
   display: inline;
   padding: 0 15px;
-  border-left: 3px solid #6d6875;
+  border-left: 3px solid #262a10;
 }
 .nav li:hover {
-  border: 5px solid #6d6875;
+  border: 5px solid #262a10;
+  border-radius: 50px;
   transition: 0.5s ease-in-out;
 }
 .nav li:active {
-  border: 5px solid #6d6875;
+  border: 5px solid #262a10;
 }
 @media (max-width: 799px) {
   .nav li {
@@ -61,11 +114,26 @@ h1 {
   }
 }
 
-h2 {
-  font-family: font1, serif;
-  font-size: 2rem;
-  font-weight: 200;
-  color: #ffb4a2;
+.section-1 {
+  display: grid;
+  grid-template-columns: 37% 63%;
+  min-height: 400px;
+  padding: 50px;
+}
+
+.section-1 .img {
+  background: url(./img/target.jpg) center/cover;
+}
+
+.section-2 {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  min-height: 400px;
+  padding: 50px;
+}
+
+.section-2 .img {
+  background: url(./img/bow-on-wall.jpg) center/cover;
 }
 
 .contact {
@@ -77,10 +145,17 @@ h2 {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100px 224px;
-  grid-template-areas: "input11 input2" "textarea textarea";
+  grid-template-areas: "input1 input2" "textarea textarea";
   width: 85%;
   margin: 30px auto;
   max-width: 600px;
+}
+@media screen and (max-width: 840px) {
+  .form-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 100px 200px;
+    grid-template-areas: "input1" "input2" "textarea";
+  }
 }
 
 .text-area {
@@ -105,7 +180,7 @@ textarea {
 
 input[type=text]:focus,
 textarea:focus {
-  border: 2px solid skyblue;
+  border: 2px solid #141204;
 }
 
 textarea {
@@ -118,6 +193,7 @@ textarea {
   justify-content: space-evenly;
   font-size: 1.3em;
   font-family: font1, crusive;
+  padding: 50px;
 }
 .network a {
   padding: 0px 25px;
@@ -128,12 +204,12 @@ textarea {
   }
 }
 .network a:hover {
-  transform: scale(2.5);
+  transform: scale(1.5);
   transition: 0.4s ease-out;
-  text-shadow: 0 0 5px #ffcdb2, 0 0 10px #ffcdb2, 0 0 15px #ffcdb2, 0 0 20px #ffb4a2, 0 0 30px #ffb4a2, 0 0 40px #ffb4a2, 0 0 55px #ffb4a2, 0 0 75px #ffb4a2;
+  color: #141204;
 }
 .network a:hover:nth-child(5) {
-  transform: scale(1.1);
+  transform: scale(1);
   font-weight: bolder;
 }
 
