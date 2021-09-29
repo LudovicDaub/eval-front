@@ -1,0 +1,142 @@
+@font-face {
+  font-family: font1;
+  src: url(./assets/Baumans-Regular.ttf);
+}
+@font-face {
+  font-family: font2;
+  src: url(./assets/Exo-Medium.ttf);
+}
+$color1: #ffcdb2;
+$color2: #ffb4a2;
+$color3: #e5989b;
+$color4: #b5898d;
+$color5: #6d6875;
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  outline: none;
+}
+body {
+  font-family: font2, serif;
+  font-size: 1rem;
+  color: $color4;
+  height: 100vh;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: $color5;
+  &:visited {
+    color: $color5;
+  }
+}
+// *************HEADER***************
+
+h1 {
+  font-family: font1, serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: $color3;
+  text-align: center;
+}
+// *************************************NAVBAR*******************************************
+.nav {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  z-index: 100;
+
+  li {
+    display: inline;
+    padding: 0 15px;
+    border-left: 3px solid $color5;
+
+    &:hover {
+      border: 5px solid $color5;
+      transition: 0.5s ease-in-out;
+    }
+    &:active {
+      border: 5px solid $color5;
+    }
+    @media (max-width: 799px) {
+      display: none;
+    }
+  }
+}
+// *************************************MAIN*******************************************
+h2 {
+  font-family: font1, serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: $color2;
+}
+// *************************************CONTACT*******************************************
+.contact {
+  text-align: center;
+  padding: 60px 0;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px 224px;
+  grid-template-areas:
+    "input11 input2"
+    "textarea textarea";
+  width: 85%;
+  margin: 30px auto;
+  max-width: 600px;
+}
+.text-area {
+  grid-area: textarea;
+}
+label {
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  margin: 20px 0 40px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: 0.2s;
+}
+input[type="text"]:focus,
+textarea:focus {
+  border: 2px solid skyblue;
+}
+textarea {
+  resize: none;
+  height: 180px;
+}
+// *************************************NETWORK*******************************************
+.network {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.3em;
+  font-family: font1, crusive;
+
+  a {
+    padding: 0px 25px;
+
+    @media (max-width: 840px) {
+      padding: 0px 5px;
+    }
+  }
+  & a:hover {
+    transform: scale(2.5);
+    transition: 0.4s ease-out;
+    text-shadow: 0 0 5px $color1, 0 0 10px $color1, 0 0 15px $color1,
+      0 0 20px $color2, 0 0 30px $color2, 0 0 40px $color2, 0 0 55px $color2,
+      0 0 75px $color2;
+
+    &:nth-child(5) {
+      transform: scale(1.1);
+      font-weight: bolder;
+    }
+  }
+}

@@ -11,15 +11,19 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>Nom de L'Association</h1>
-      <div class="navbar">
+      <div class="nav">
         <ul>
-          <li>Acceuil</li>
-          <li>Evenements</li>
+          <li><a href="./index.html">Acceuil</a></li>
+          <li><a href="./event.html">Evenements</a></li>
         </ul>
       </div>
     </header>
@@ -36,41 +40,36 @@
         harum sequi perferendis!
       </p>
     </main>
+    <section class="contact">
+      <h2>Get In Touch</h2>
+
+      <form action="#">
+        <div class="form-grid">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+          </div>
+          <div class="text-area">
+            <label for="message"></label>
+            <textarea id="message"></textarea>
+          </div>
+        </div>
+        <input type="submit" class="button" value="Send Message" />
+      </form>
+    </section>
+
     <footer>
-      <h2>Nous contacter</h2>
       <div class="network">
-        <h2>Réseaux Sociaux</h2>
-        <ul>
-          <li>facebook</li>
-          <li>twitter</li>
-          <li>instagram</li>
-        </ul>
-      </div>
-      <div class="contact">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Adresse Email</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Votre Message</label
-          >
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
-        </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Envoyer</button>
-        </div>
+        <a href="http://twitter.fr"><i class="fab fa-twitter"></i></a>
+        <a href="http://facebook.fr"><i class="fab fa-facebook"></i></a>
+        <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/LudovicDaub" target="_blank"
+          >Ludovic Daub; © 2021</a
+        >
       </div>
     </footer>
     <script
