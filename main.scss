@@ -214,7 +214,6 @@ textarea {
 body {
   @media screen and (max-width: 425px) {
     font-size: 1.5rem;
-    overflow-x: hidden;
   }
 }
 h1 {
@@ -232,14 +231,14 @@ p {
 .section-2,
 .section-3 {
   @media screen and (max-width: 840px) {
-    display: block;
+    display: flex;
   }
 }
 .section-1 .img,
 .section-2 .img,
 .section-3 .img {
   @media screen and (max-width: 840px) {
-    background: hidden;
+    background: none;
   }
 }
 .form-grid {
@@ -255,5 +254,6 @@ p {
 .network {
   @media screen and (max-width: 425px) {
     display: inline-block;
+    font-size: 1rem;
   }
 }

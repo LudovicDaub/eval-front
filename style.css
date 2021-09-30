@@ -219,7 +219,6 @@ textarea {
 @media screen and (max-width: 425px) {
   body {
     font-size: 1.5rem;
-    overflow-x: hidden;
   }
 }
 
@@ -240,7 +239,7 @@ textarea {
   .section-1,
 .section-2,
 .section-3 {
-    display: block;
+    display: flex;
   }
 }
 
@@ -248,7 +247,7 @@ textarea {
   .section-1 .img,
 .section-2 .img,
 .section-3 .img {
-    background: hidden;
+    background: none;
   }
 }
 
@@ -263,6 +262,7 @@ textarea {
 @media screen and (max-width: 425px) {
   .network {
     display: inline-block;
+    font-size: 1rem;
   }
 }
 
