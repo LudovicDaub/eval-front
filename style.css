@@ -10,15 +10,13 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-  outline: none;
 }
 
 body {
   font-family: font2, serif;
   font-size: 1.7rem;
   color: #141204;
-  background: url(./img/bg.jpg) no-repeat 50% 50%;
-  background-size: cover;
+  background: url(./img/bg.jpg) no-repeat center/cover;
 }
 
 .bg-opacity {
@@ -28,7 +26,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 .container {
@@ -36,7 +34,16 @@ body {
   justify-content: center;
   align-items: center;
   padding: 55px;
-  z-index: 10;
+}
+
+h1 {
+  text-align: center;
+  font-family: font1, serif;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #432818;
+  margin: 150px;
+  letter-spacing: 4px;
 }
 
 h2 {
@@ -45,7 +52,7 @@ h2 {
   font-weight: 200;
   color: #6f1d1b;
   text-align: center;
-  z-index: 2;
+  letter-spacing: 2px;
 }
 
 p {
@@ -55,7 +62,7 @@ p {
 }
 
 .button {
-  border: 1px solid #ccc;
+  border: 1px solid #262a10;
   background: transparent;
   border-radius: 50px;
   padding: 13px 30px;
@@ -69,6 +76,7 @@ p {
 .button:hover {
   border: 1px solid #99582a;
   color: #99582a;
+  background: white;
 }
 
 a {
@@ -77,15 +85,6 @@ a {
 }
 a:visited {
   color: #262a10;
-}
-
-h1 {
-  text-align: center;
-  font-family: font1, serif;
-  font-size: 4rem;
-  font-weight: 600;
-  color: #432818;
-  margin: 150px;
 }
 
 .nav {
@@ -104,7 +103,7 @@ h1 {
 .nav li:hover {
   border: 5px solid #262a10;
   border-radius: 50px;
-  transition: 0.5s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 .nav li:active {
   border: 5px solid #262a10;
@@ -137,13 +136,20 @@ h1 {
 .section-3 {
   display: grid;
   grid-template-columns: 65% 35%;
-  min-height: 400px;
+  min-height: 600px;
   padding: 50px;
 }
 
 .section-3 .img {
   background: url(./img/horse-bow.jpg) center/cover;
   opacity: 0.9;
+  height: 1200px;
+}
+
+.carousel {
+  position: relative;
+  width: 50%;
+  margin: 0 25%;
 }
 
 .contact {
@@ -160,13 +166,6 @@ h1 {
   margin: 30px auto;
   max-width: 600px;
 }
-@media screen and (max-width: 840px) {
-  .form-grid {
-    grid-template-columns: 100%;
-    grid-template-rows: 100px 100px 200px;
-    grid-template-areas: "input1" "input2" "textarea";
-  }
-}
 
 .text-area {
   grid-area: textarea;
@@ -175,7 +174,6 @@ h1 {
 label {
   font-weight: 600;
   font-size: 1.3rem;
-  letter-spacing: 1px;
 }
 
 input[type=text],
@@ -208,25 +206,64 @@ textarea {
 .network a {
   padding: 0px 25px;
 }
-@media (max-width: 840px) {
-  .network a {
-    padding: 0px 5px;
-  }
-}
 .network a:hover {
   transform: scale(1.5);
   transition: 0.4s ease-out;
   color: #99582a;
 }
 .network a:hover:nth-child(4) {
-  transform: scale(1);
+  transform: scale(1.1);
   font-weight: bold;
 }
 
-.carousel {
-  position: relative;
-  width: 800px;
-  margin: 0 25%;
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 1.5rem;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 2.5rem;
+    margin: 150px 0 30px 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  p {
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .section-1,
+.section-2,
+.section-3 {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .section-1 .img,
+.section-2 .img,
+.section-3 .img {
+    background: hidden;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .form-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: 150px 150px 250px;
+    grid-template-areas: "input1" "input2" "textarea";
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .network {
+    display: inline-block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
