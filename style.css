@@ -87,6 +87,9 @@ a {
 a:visited {
   color: #262a10;
 }
+a:hover {
+  color: #262a10;
+}
 
 .nav {
   position: absolute;
@@ -103,16 +106,20 @@ a:visited {
 }
 .nav li:hover {
   border: 5px solid #262a10;
+  color: #262a10;
   border-radius: 50px;
   transition: 0.1s ease-in-out;
 }
 .nav li:active {
   border: 5px solid #262a10;
 }
+.nav li a:hover {
+  color: #262a10;
+}
 
 .section-1 {
   display: grid;
-  grid-template-columns: 37% 63%;
+  grid-template-columns: 65% 35%;
   min-height: 400px;
   padding: 50px;
 }
@@ -124,7 +131,7 @@ a:visited {
 
 .section-2 {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 55% 45%;
   min-height: 400px;
   padding: 50px;
 }
@@ -136,7 +143,7 @@ a:visited {
 
 .section-3 {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 40% 60%;
   min-height: 600px;
   padding: 50px;
 }
@@ -149,8 +156,8 @@ a:visited {
 
 .carousel {
   position: relative;
-  width: 50%;
-  margin: 0 25%;
+  width: 70%;
+  margin: 50px 15%;
 }
 
 .contact {
@@ -226,7 +233,7 @@ textarea {
 @media screen and (max-width: 425px) {
   h1 {
     font-size: 2.5rem;
-    margin: 150px 0 30px 0;
+    margin: 150px 0 100px 0;
   }
 }
 
@@ -236,19 +243,34 @@ textarea {
   }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1024px) {
   .section-1,
 .section-2,
 .section-3 {
-    display: flex;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    min-height: 0;
+    padding: 0;
   }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .section-1 .img,
 .section-2 .img,
 .section-3 .img {
-    background: none;
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section-carousel {
+    margin-top: 200px;
   }
 }
 
