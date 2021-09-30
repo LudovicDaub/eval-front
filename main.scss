@@ -20,7 +20,7 @@ $color5: #262a10;
 }
 body {
   font-family: font2, serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: $color2;
   background: url(./img/bg.jpg) no-repeat 50% 50%;
   background-size: cover;
@@ -66,8 +66,8 @@ p {
   font-family: font2, sans-serif;
   transition: 0.3s;
   &:hover {
-    border: 1px solid $color2;
-    color: $color2;
+    border: 1px solid $color4;
+    color: $color4;
   }
 }
 a {
@@ -83,8 +83,8 @@ a {
 h1 {
   text-align: center;
   font-family: font1, serif;
-  font-size: 3rem;
-  font-weight: 400;
+  font-size: 4rem;
+  font-weight: 600;
   color: $color3;
   margin: 150px;
 }
@@ -94,7 +94,8 @@ h1 {
   top: 30px;
   right: 50px;
   z-index: 100;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: bold;
 
   li {
     display: inline;
@@ -109,9 +110,6 @@ h1 {
     &:active {
       border: 5px solid $color5;
     }
-    @media (max-width: 799px) {
-      display: none;
-    }
   }
 }
 // *************************************MAIN*******************************************
@@ -125,6 +123,7 @@ h1 {
 }
 .section-1 .img {
   background: url(./img/target.jpg) center/cover;
+  opacity: 0.8;
 }
 // *********************SECTION 2****************
 .section-2 {
@@ -135,6 +134,18 @@ h1 {
 }
 .section-2 .img {
   background: url(./img/bow-on-wall.jpg) center/cover;
+  opacity: 0.8;
+}
+// *********************SECTION 3****************
+.section-3 {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  min-height: 400px;
+  padding: 50px;
+}
+.section-3 .img {
+  background: url(./img/horse-bow.jpg) center/cover;
+  opacity: 0.9;
 }
 // *************************************CONTACT*******************************************
 .contact {
@@ -165,7 +176,7 @@ h1 {
 }
 label {
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
 }
 input[type="text"],
@@ -189,7 +200,7 @@ textarea {
 .network {
   display: flex;
   justify-content: space-evenly;
-  font-size: 1.3em;
+  font-size: 2rem;
   font-family: font1, crusive;
   padding: 50px;
 
@@ -203,10 +214,16 @@ textarea {
   & a:hover {
     transform: scale(1.5);
     transition: 0.4s ease-out;
-    color: $color2;
-    &:nth-child(5) {
+    color: $color4;
+    &:nth-child(4) {
       transform: scale(1);
-      font-weight: bolder;
+      font-weight: bold;
     }
   }
+}
+// *************************************CAROUSEL*******************************************
+.carousel {
+  position: relative;
+  width: 800px;
+  margin: 0 25%;
 }
